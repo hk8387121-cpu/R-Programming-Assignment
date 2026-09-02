@@ -1,0 +1,6 @@
+OrderID,CustomerID,ProductID,Quantity,OrderTotal,Status
+O1001,C001,P001,1,55250,Completed
+O1002,C002,P002,2,5520,Completed
+O1003,C003,P003,3,3312,Completed
+O1004,C001,P004,2,2910,Completed
+O1005,C002,P005,1,36000,Completed
