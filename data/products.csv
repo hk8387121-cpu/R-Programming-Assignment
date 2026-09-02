@@ -1,0 +1,6 @@
+ProductID,ProductName,Category,Price,Stock
+P001,Laptop,electronics,65000,8
+P002,Headphones,electronics,3000,20
+P003,T-Shirt,clothing,1200,30
+P004,Rice Bag,grocery,1500,12
+P005,Smartphone,electronics,40000,10
