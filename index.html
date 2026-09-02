@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CartIQ — E-Commerce Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar"><div class="brand"><span class="logo">C</span><div><b>CartIQ</b><small>Commerce Intelligence</small></div></div>
+<nav><button class="nav active" data-page="overview">◈ <span>Overview</span></button><button class="nav" data-page="orders">↗ <span>Orders</span></button><button class="nav" data-page="products">▦ <span>Products</span></button><button class="nav" data-page="customers">◎ <span>Customers</span></button><button class="nav" data-page="analytics">⌁ <span>Analytics</span></button></nav>
+<div class="side-note"><span class="pulse"></span><div><b>Live workspace</b><small>Browser data · instant updates</small></div></div></aside>
+<main><header><div><p class="eyebrow">ITA0401 · R PROGRAMMING PROJECT</p><h1 id="title">Commerce overview</h1></div><div class="header-actions"><button class="ghost" onclick="resetDemo()">↻ Reset demo</button><button class="primary" onclick="openOrder()">＋ New order</button></div></header>
+<section id="overview" class="page active"><div class="hero"><div><span class="tag">OPERATIONS PULSE</span><h2>Know what’s moving.<br><em>Act on what’s next.</em></h2><p>Explore customers, inventory and order performance in one focused workspace.</p></div><div class="hero-ring"><strong id="heroRevenue">₹0</strong><span>revenue</span></div></div>
+<div class="stats"><div class="stat"><span>Revenue</span><strong id="revenue">₹0</strong><small id="revenueTrend">Across completed orders</small></div><div class="stat"><span>Orders</span><strong id="orderCount">0</strong><small>Placed in workspace</small></div><div class="stat"><span>Customers</span><strong id="customerCount">0</strong><small>Registered shoppers</small></div><div class="stat warning"><span>Low stock</span><strong id="lowStock">0</strong><small>Needs attention</small></div></div>
+<div class="grid2"><div class="panel"><div class="panel-head"><div><span class="eyebrow">REVENUE FLOW</span><h3>Sales by category</h3></div><span class="mini">Live</span></div><div id="categoryBars" class="bars"></div></div><div class="panel"><div class="panel-head"><div><span class="eyebrow">TOP PERFORMER</span><h3>Best-selling products</h3></div></div><div id="topProducts"></div></div></div></section>
+<section id="orders" class="page"><div class="section-head"><div><span class="eyebrow">ORDER MANAGEMENT</span><h2>Orders</h2></div><button class="primary" onclick="openOrder()">＋ Place order</button></div><div class="panel table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Product</th><th>Qty</th><th>Total</th><th>Status</th><th></th></tr></thead><tbody id="ordersTable"></tbody></table></div></section>
+<section id="products" class="page"><div class="section-head"><div><span class="eyebrow">CATALOG & INVENTORY</span><h2>Products</h2></div><button class="primary" onclick="openProduct()">＋ Add product</button></div><div class="product-grid" id="productGrid"></div></section>
+<section id="customers" class="page"><div class="section-head"><div><span class="eyebrow">CUSTOMER INTELLIGENCE</span><h2>Customers</h2></div><button class="primary" onclick="openCustomer()">＋ Register customer</button></div><div class="customer-grid" id="customerGrid"></div></section>
+<section id="analytics" class="page"><div class="section-head"><div><span class="eyebrow">DECISION SUPPORT</span><h2>Analytics</h2></div></div><div class="analytics-grid"><div class="panel"><span class="eyebrow">CATEGORY MIX</span><h3>Revenue distribution</h3><div id="analyticsBars" class="analytics-bars"></div></div><div class="panel"><span class="eyebrow">INSIGHTS</span><h3>What the data says</h3><div id="insights" class="insights"></div></div></div></section>
+</main></div>
+<div id="modal" class="modal hidden"><div class="modal-card"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div><script src="app.js"></script></body></html>
